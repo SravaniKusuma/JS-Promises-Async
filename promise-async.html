@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promises, async await</title>
+    </head>
+    <body>
+        <script>
+        async function getData(uId) {
+                let myPromise = new Promise(function(resolve){
+                    setTimeout(function(){
+                           
+                            console.log("Fetched the data!");
+                            resolve( "skc@gmail.com"); }, 4000);
+                        })
+
+                       return await myPromise;
+                       
+
+                }
+            
+                console.log("start");
+                getData("skc").then((email)=>{
+                    console.log("Email id of the user id is: " + email);
+                    console.log("end");}
+                    );
+                
+            
+        </script>
+    </body>
+</html>
